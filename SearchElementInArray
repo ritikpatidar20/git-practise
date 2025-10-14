@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, X;
+    cin >> N >> X;  // Input size of array and element to search
+    
+    int A[N];
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];  // Input array elements
+    }
+    
+    bool found = false;
+    for (int i = 0; i < N; i++) {
+        if (A[i] == X) {   // Check if element found
+            found = true;
+            break;
+        }
+    }
+    
+    if (found == true)
+        cout << "YES";
+    else
+        cout << "NO";
+    
+    return 0;
+}
